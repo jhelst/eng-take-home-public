@@ -10,13 +10,13 @@ There are two sections to this take home with time estimates. Please complete bo
 
 The sections are as follows:
 
-[Front End Section](./FRONT-END.md)
+[Front End Coding Section](./FRONT-END.md) (1.5hrs)
 
 In this section, we ask you to build out a "Spootify" site given some code but with bits left out.
 
-[Back End Section](BACK-END.md)
+[Writing Section](WRITING.md) (.5 hrs)
 
-This section will test your ability to use SQL. Some of the questions are straight-forward and some are fairly open ended. Do what you can in the time that you have.
+In this ection, we ask you to write about your technology background an preferences.
 
 ### Submitting Your Solution
 
