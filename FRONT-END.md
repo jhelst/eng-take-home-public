@@ -1,16 +1,16 @@
 # Front End (1.5 hrs)
 
-You will have 1.5-ish hours to complete this portion of the assignment. 
+We expect this portion of the take-home to require about 1.5 hours of focused time to complete. 
 
-### Goals/Outcomes
+### Goals
 
-- To test knowledge of consuming APIs and handling responses
-- Loading state and knowing where and how to make multiple API calls efficiently
+- Test knowledge of consuming APIs and handling responses
+- Load state and knowing where and how to make multiple API calls efficiently
 
 ### Pre-requisites
 
-- Add your Spotify client ID & secret to `config.js`
-  - Note. **Never add this type of config to version control. This would usually come from your build server.**
+- Spotify account (free-tier)
+- Spotify client ID & secret set in `config.js`
 
 ### Requirements
 
@@ -23,7 +23,7 @@ Please build pages with the following:
 
 ### What's Already Been Done
 
-- UI/UX for all elements, including previews (mobile responsive)
+- UI/UX for all elements, including previews
 
 ### Useful info
 
