@@ -16,7 +16,7 @@ In this section, we ask you to build out a "Spootify" site given some code but w
 
 [Writing Section](WRITING.md) (.5 hrs)
 
-In this ection, we ask you to write about your technology background an preferences.
+In this ection, we ask you to write about your technology background and preferences.
 
 ### Submitting Your Solution
 
