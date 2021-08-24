@@ -1,11 +1,11 @@
 # Back End (.5hrs)
 
-You will have a half hour to complete this portion of the assigment.
+We expect this portion of the take-home will take about 30 minutes to complete.
 
-### Goals/Outcomes
+### Goals
 
-- To test knowledge of using SQL
-- To evaluate approach to vaguely defined problems
+- Test knowledge of using SQL
+- Evaluate approach to vaguely defined problems
 
 ### Task Description
 
