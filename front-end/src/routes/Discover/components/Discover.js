@@ -1,27 +1,57 @@
-import React, { Component } from 'react';
-import DiscoverBlock from './DiscoverBlock/components/DiscoverBlock';
-import '../styles/_discover.scss';
+import * as React from 'react'
+import DiscoverBlock from './DiscoverBlock/components/DiscoverBlock'
+import '../styles/_discover.scss'
+import { getPlaylist } from '../api/data-fetchers'
+import { AuthContext } from '../../../context/authContext'
 
-export default class Discover extends Component {
-  constructor() {
-    super();
+const Discover = () => {
+  const { getUser } = React.useContext(AuthContext)
+  const { token } = getUser()
+  const [released, setReleased] = React.useState({ albums: { items: [] } })
+  const [featured, setFeatured] = React.useState({ playlists: { items: [] } })
+  const [categories, setCategories] = React.useState({
+    categories: { items: [] },
+  })
 
-    this.state = {
-      newReleases: [],
-      playlists: [],
-      categories: []
-    };
-  }
+  React.useEffect(() => {
+    const fetchPlaylists = async () => {
+      try {
+        const _released = await getPlaylist({ type: 'new-releases', token })
+        setReleased(_released)
+        const _featured = await getPlaylist({
+          type: 'featured-playlists',
+          token,
+        })
+        setFeatured(_featured)
+        const _categories = await getPlaylist({ type: 'categories', token })
+        setCategories(_categories)
+      } catch (e) {
+        console.log(e)
+      }
+    }
+    fetchPlaylists()
+  }, [token])
 
-  render() {
-    const { newReleases, playlists, categories } = this.state;
-
-    return (
-      <div className="discover">
-        <DiscoverBlock text="RELEASED THIS WEEK" id="released" data={newReleases} />
-        <DiscoverBlock text="FEATURED PLAYLISTS" id="featured" data={playlists} />
-        <DiscoverBlock text="BROWSE" id="browse" data={categories} imagesKey="icons" />
-      </div>
-    );
-  }
+  return (
+    <div className="discover">
+      <DiscoverBlock
+        text="RELEASED THIS WEEK"
+        id="released"
+        items={released?.albums?.items}
+      />
+      <DiscoverBlock
+        text="FEATURED PLAYLISTS"
+        id="featured"
+        items={featured?.playlists?.items}
+      />
+      <DiscoverBlock
+        text="BROWSE"
+        id="browse"
+        items={categories?.categories?.items}
+        imagesKey="icons"
+      />
+    </div>
+  )
 }
+
+export default Discover
